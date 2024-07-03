@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.fa-heart {
+  font-size: 4rem;
+  color: #e74c3c;
+  animation: pulse 1s infinite;
+}
+
+.question {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.btn-group {
+  margin-top: 2rem;
+  position: relative;
+  height: 100px; /* Butonların kaçabileceği alan */
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  position: absolute;
+}
+
+button.yes {
+  background: #2ecc71;
+  color: #fff;
+  left: 25%; /* Sabit konum */
+  transform: translateX(-50%);
+}
+
+button.no {
+  background: #e74c3c;
+  color: #fff;
+  left: 75%; /* Başlangıç konumu */
+  transform: translateX(-50%);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
